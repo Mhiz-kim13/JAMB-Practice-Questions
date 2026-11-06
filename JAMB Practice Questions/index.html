@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7f2">
+    <meta name="description" content="Practice original JAMB-style questions in eight subjects and review your answers.">
+    <title>JAMB Practice | Study smarter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#" aria-label="JAMB Practice home">
+            <span class="brand-mark" aria-hidden="true">J</span>
+            <span>study<span class="brand-accent">mate</span></span>
+        </a>
+        <span class="topbar-note"><span class="status-dot"></span> Your daily practice space</span>
+    </header>
+
+    <main class="page-shell">
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow"><span class="eyebrow-line"></span> JAMB EXAM PREPARATION</p>
+            <h1 id="page-title">Small steps.<br><span>Big results.</span></h1>
+            <p class="intro-copy">Choose a subject, pick a year, and build your confidence one question at a time.</p>
+        </section>
+
+        <section class="practice-layout" aria-label="Practice questions">
+            <aside class="setup-card" aria-labelledby="setup-title">
+                <div class="card-heading">
+                    <span class="heading-icon" aria-hidden="true">✳</span>
+                    <div>
+                        <h2 id="setup-title">Set up your session</h2>
+                        <p>Make it your own</p>
+                    </div>
+                </div>
+
+                <label class="field-label" for="subject-select">SUBJECT</label>
+                <div class="select-wrap">
+                    <select id="subject-select">
+                        <option value="all">All subjects</option>
+                        <option value="Mathematics">Mathematics</option>
+                        <option value="English">English</option>
+                        <option value="Biology">Biology</option>
+                        <option value="Physics">Physics</option>
+                        <option value="Chemistry">Chemistry</option>
+                        <option value="Civic Education">Civic Education</option>
+                        <option value="Geography">Geography</option>
+                        <option value="Further Mathematics">Further Mathematics</option>
+                    </select>
+                    <span class="select-chevron" aria-hidden="true">⌄</span>
+                </div>
+
+                <label class="field-label year-label" for="year-select">PRACTICE YEAR</label>
+                <div class="select-wrap">
+                    <select id="year-select" aria-label="Practice year"></select>
+                    <span class="select-chevron" aria-hidden="true">⌄</span>
+                </div>
+
+                <button class="primary-button" id="start-button" type="button">
+                    Start practising <span aria-hidden="true">→</span>
+                </button>
+                <p class="session-note">Your progress is kept for this session.</p>
+            </aside>
+
+            <section class="quiz-card" aria-labelledby="quiz-title">
+                <div class="quiz-topline">
+                    <span class="question-count" id="question-count">QUESTION 1 OF 16</span>
+                    <span class="subject-pill" id="subject-pill">Mathematics</span>
+                </div>
+                <div class="progress-track" role="progressbar" id="progress-bar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <span id="progress-fill"></span>
+                </div>
+
+                <div class="question-content" aria-live="polite">
+                    <p class="question-kicker" id="question-kicker">MATHEMATICS · PRACTICE SET</p>
+                    <h2 id="quiz-title">Loading your first question…</h2>
+                    <div class="options-list" id="options-list" role="radiogroup" aria-labelledby="quiz-title"></div>
+                </div>
+
+                <div class="feedback" id="feedback" role="status" hidden></div>
+                <div class="quiz-actions">
+                    <span class="score-display" id="score-display">Score <strong>0</strong></span>
+                    <button class="check-button" id="check-button" type="button" disabled>Check answer <span aria-hidden="true">→</span></button>
+                    <button class="next-button" id="next-button" type="button" hidden>Next question <span aria-hidden="true">→</span></button>
+                </div>
+            </section>
+        </section>
+
+        <p class="disclaimer"><span aria-hidden="true">ⓘ</span> These are original JAMB-style practice questions, not verified or official past questions. The selected year labels your practice session.</p>
+        <footer class="page-footer">
+            <span>Keep showing up. You’ve got this.</span>
+            <span>MATHEMATICS · ENGLISH · SCIENCES · HUMANITIES</span>
+        </footer>
+    </main>
+</body>
+</html>
